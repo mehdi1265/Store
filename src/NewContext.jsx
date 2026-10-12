@@ -5,6 +5,14 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import {
+  Smartphone,
+  Laptop,
+  Headphones,
+  Watch,
+  Camera,
+  Gamepad2,
+} from "lucide-react";
 
 
 export let NewContext=createContext()
@@ -16,108 +24,226 @@ export function AppProvider({children}){
     { img: "/3.webp", id: "headphone" },
     { img: "/4.webp", id: "watch" },
   ];
-        const categories =[
-      {
-        id:"mobile",
-      name: "گوشی موبایل",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="black" strokeWidth="2" viewBox="0 0 24 24 ">
-          <rect x="6" y="2" width="12" height="20" rx="2" />
-          <line x1="12" y1="18" x2="12" y2="18" />
-        </svg>
-      ),
-      submeno:[
-      { id:"appel", name:"Appel" },
-      {id:"sumsung",name:" Sumsung "},
-       {id:"xiaomi",name:" Xiaomi"} ,
-       {id:"nokiya",name:" nokiya"}
-      ]
+        
+const categories = [
+  { id: "mobile", name: "موبایل", icon: Smartphone },
+  { id: "laptop", name: "لپ‌تاپ", icon: Laptop },
+  { id: "headphone", name: "هدفون و هدست", icon: Headphones },
+  { id: "watch", name: "ساعت هوشمند", icon: Watch },
+  { id: "camera", name: "دوربین", icon: Camera },
+  { id: "gaming", name: "بازی و کنسول", icon: Gamepad2 },
+];
+
+
+const products = [
+  // موبایل
+  {
+    id: 1,
+    name: "iPhone 15",
+    category: "mobile",
+    brand: "Apple",
+    price: 45000000,
+    image: "",
+    features: { storage: 128, ram: 6, color: "مشکی" },
+  },
+  {
+    id: 2,
+    name: "iPhone 14",
+    category: "mobile",
+    brand: "Apple",
+    price: 35000000,
+    image: "",
+    features: { storage: 128, ram: 6, color: "آبی" },
+  },
+  {
+    id: 3,
+    name: "Galaxy A55",
+    category: "mobile",
+    brand: "Samsung",
+    price: 22000000,
+    image: "",
+    features: { storage: 256, ram: 8, color: "آبی" },
+  },
+  {
+    id: 4,
+    name: "Redmi Note 13",
+    category: "mobile",
+    brand: "Xiaomi",
+    price: 14000000,
+    image: "",
+    features: { storage: 256, ram: 8, color: "سبز" },
+  },
+
+  // لپ‌تاپ
+  {
+    id: 5,
+    name: "Asus Vivobook 15",
+    category: "laptop",
+    brand: "Asus",
+    price: 38000000,
+    image: "",
+    features: { ram: 16, storage: 512, gpu: "integrated" },
+  },
+  {
+    id: 6,
+    name: "Lenovo IdeaPad Slim 3",
+    category: "laptop",
+    brand: "Lenovo",
+    price: 32000000,
+    image: "",
+    features: { ram: 8, storage: 512, gpu: "integrated" },
+  },
+  {
+    id: 7,
+    name: "MacBook Air M2",
+    category: "laptop",
+    brand: "Apple",
+    price: 65000000,
+    image: "",
+    features: { ram: 8, storage: 256, gpu: "integrated" },
+  },
+
+  // هدفون
+  {
+    id: 8,
+    name: "Sony WH-1000XM5",
+    category: "headphone",
+    brand: "Sony",
+    price: 18000000,
+    image: "",
+    features: {
+      connection: "wireless",
+      noiseCancellation: true,
+      color: "مشکی",
     },
-    {
-      id:"laptop",
-      name: "لپ‌تاپ",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="black" strokeWidth="2" viewBox="0 0 24 24">
-          <rect x="3" y="4" width="18" height="12" rx="2" />
-          <line x1="2" y1="20" x2="22" y2="20" />
-        </svg>
-      ),
-       submeno:[
-      { id:"appel", name:"Appel" },
-      {id:"sumsung",name:" Sumsung "},
-       {id:"xiaomi",name:" Xiaomi"} ,
-       {id:"nokiya",name:" nokiya"}
-      ]
+  },
+  {
+    id: 9,
+    name: "AirPods Pro 2",
+    category: "headphone",
+    brand: "Apple",
+    price: 12000000,
+    image: "",
+    features: {
+      connection: "wireless",
+      noiseCancellation: true,
+      color: "سفید",
     },
-    {
-      id:"headphone",
-      name: "هدفون",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="black" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M4 14v-2a8 8 0 0116 0v2" />
-          <rect x="2" y="14" width="4" height="6" rx="1" />
-          <rect x="18" y="14" width="4" height="6" rx="1" />
-        </svg>
-      ),
-      submeno:[
-      { id:"appel", name:"Appel" },
-      {id:"sumsung",name:" Sumsung "},
-       {id:"xiaomi",name:" Xiaomi"} ,
-       {id:"nokiya",name:" nokiya"}
-      ]
+  },
+  {
+    id: 10,
+    name: "Redmi Buds 5",
+    category: "headphone",
+    brand: "Xiaomi",
+    price: 2500000,
+    image: "",
+    features: {
+      connection: "wireless",
+      noiseCancellation: true,
+      color: "سفید",
     },
-     
-    {
-      id:"watch",
-      name: "ساعت هوشمند",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="black" strokeWidth="2" viewBox="0 0 24 24">
-          <rect x="6" y="6" width="12" height="12" rx="3" />
-          <path d="M9 6V3h6v3M9 18v3h6v-3" />
-        </svg>
-      ),
-       submeno:[
-      { id:"appel", name:"Appel" },
-      {id:"sumsung",name:" Sumsung "},
-       {id:"xiaomi",name:" Xiaomi"} ,
-       {id:"nokiya",name:" nokiya"}
-      ]
+  },
+
+  // ساعت هوشمند
+  {
+    id: 11,
+    name: "Apple Watch SE",
+    category: "watch",
+    brand: "Apple",
+    price: 15000000,
+    image: "",
+    features: {
+      compatibility: "ios",
+      waterResistance: true,
+      color: "مشکی",
     },
-    
-    {
-      id:"camera" ,
-      name: "دوربین",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="black" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M3 8a2 2 0 012-2h2l2-2h6l2 2h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
-          <circle cx="12" cy="13" r="3" />
-        </svg>
-      ),
-       submeno:[
-      { id:"appel", name:"Appel" },
-      {id:"sumsung",name:" Sumsung "},
-       {id:"xiaomi",name:" Xiaomi"} ,
-       {id:"nokiya",name:" nokiya"}
-      ]
+  },
+  {
+    id: 12,
+    name: "Galaxy Watch 6",
+    category: "watch",
+    brand: "Samsung",
+    price: 13000000,
+    image: "",
+    features: {
+      compatibility: "android",
+      waterResistance: true,
+      color: "نقره‌ای",
     },
-    {
-      id:"gaming" ,
-      name: "گیمینگ",
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="black" strokeWidth="2" viewBox="0 0 24 24">
-          <rect x="2" y="7" width="20" height="10" rx="4" />
-          <line x1="7" y1="12" x2="7" y2="12" />
-          <line x1="17" y1="12" x2="17" y2="12" />
-        </svg>
-      ),
-       submeno:[
-      { id:"appel", name:"Appel" },
-      {id:"sumsung",name:" Sumsung "},
-       {id:"xiaomi",name:" Xiaomi"} ,
-       {id:"nokiya",name:" nokiya"}
-      ]
+  },
+  {
+    id: 13,
+    name: "Redmi Watch 4",
+    category: "watch",
+    brand: "Xiaomi",
+    price: 4500000,
+    image: "",
+    features: {
+      compatibility: "android",
+      waterResistance: true,
+      color: "مشکی",
     },
-  ];
+  },
+
+  // دوربین
+  {
+    id: 14,
+    name: "Canon EOS R50",
+    category: "camera",
+    brand: "Canon",
+    price: 52000000,
+    image: "",
+    features: { cameraType: "mirrorless", resolution: 24 },
+  },
+  {
+    id: 15,
+    name: "Sony Alpha A6400",
+    category: "camera",
+    brand: "Sony",
+    price: 48000000,
+    image: "",
+    features: { cameraType: "mirrorless", resolution: 24 },
+  },
+  {
+    id: 16,
+    name: "Nikon D7500",
+    category: "camera",
+    brand: "Nikon",
+    price: 42000000,
+    image: "",
+    features: { cameraType: "dslr", resolution: 21 },
+  },
+
+  // بازی و کنسول
+  {
+    id: 17,
+    name: "PlayStation 5",
+    category: "gaming",
+    brand: "Sony",
+    price: 35000000,
+    image: "",
+    features: { platform: "playstation", storage: 825 },
+  },
+  {
+    id: 18,
+    name: "Xbox Series X",
+    category: "gaming",
+    brand: "Microsoft",
+    price: 38000000,
+    image: "",
+    features: { platform: "xbox", storage: 1024 },
+  },
+  {
+    id: 19,
+    name: "Nintendo Switch OLED",
+    category: "gaming",
+    brand: "Nintendo",
+    price: 20000000,
+    image: "",
+    features: { platform: "switch", storage: 64 },
+  },
+];
+
    const menue=[
         {name:" سوبر مارکت",
         icon:
@@ -167,7 +293,7 @@ let Cards2=[
        
   ]
     return(
-        <NewContext.Provider value={{categories,slides,menue,Cards,Cards2}}>
+        <NewContext.Provider value={{categories,slides,menue,Cards,Cards2,products}}>
             {children}
         </NewContext.Provider>
     )

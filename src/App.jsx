@@ -6,8 +6,11 @@ import './index.css';
 import Home from './Home'
 import { AppProvider } from './NewContext';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CategoryPage from "./CategoryPage";
 import CategoryPages from './CategoryPages';
+import BuyPage from './BuyPage';
+import Login from './login';
+
+
 export default function App() {
   const [count, setCount] = useState(0)
 
@@ -16,9 +19,9 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/category/:id" element={<CategoryPage />} />
-         <Route path="/category" element={<CategoryPage />} />
          <Route path="/products" element={<CategoryPages />} />
+         <Route path="/cart" element={<BuyPage />} />
+         <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>
