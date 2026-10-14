@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CategoryPages from './CategoryPages';
 import BuyPage from './BuyPage';
 import Login from './login';
-
+import Balut from './Balut';
 
 export default function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +22,8 @@ export default function App() {
          <Route path="/products" element={<CategoryPages />} />
          <Route path="/cart" element={<BuyPage />} />
          <Route path="/login" element={<Login />} />
+         <Route path="/balut" element={<Balut />} />
+
         </Routes>
       </BrowserRouter>
     </AppProvider>

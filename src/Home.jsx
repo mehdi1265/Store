@@ -83,7 +83,7 @@ export default function Home(){
         
         <div className="flex flex-col select-none ">
           <Header/>
-          <div className="mx-[40]">
+          <div className="mx-[40] mt-4">
    <section>     
           <div>
             <Swiper
@@ -134,7 +134,7 @@ export default function Home(){
    <section>      
             <div className="flex felx-row m-auto w-[1620px] h-[300px] my-10 bg-red-600  border rounded-lg">
               
-                  <div className="flex items-center  overflow-hidden ">
+                  <div className="flex items-center overflow-hidden ">
                     <Swiper
                       modules={[Navigation]}
                       navigation
@@ -164,8 +164,8 @@ export default function Home(){
                    ))}
                 
                </Swiper>
-                   </div>
-                     <div className="flex flex-col items-center p-12 size-15 text-white">
+                   </div >
+                     <div id="shegeftangiz" className="flex flex-col items-center p-12 size-15 text-white">
                      <img src="./300.png" className="w-15 h-15 " ></img>
                      <h5 className="pl-3 py-2 text-xl">شگفت انگیز</h5>
                      <Timer/>
@@ -224,7 +224,7 @@ export default function Home(){
                 
                </Swiper>
                    </div>
-                     <div className="flex flex-col items-center p-12 size-15 text-white">
+                     <div id="porforosh" className="flex flex-col items-center p-12 size-15 text-white">
                      <img src="./300.png" className="w-15 h-15 " ></img>
                      <h5 className="pl-3 py-2 text-xl">‍‍پرفروش ترین ها</h5>
                      <Timer/>

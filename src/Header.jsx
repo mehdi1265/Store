@@ -58,15 +58,15 @@ export default function Header() {
 
       <div className="flex justify-end mx-20">
         <div className="flex flex-row-reverse gap-12">
-          <Link to="">
+          <a href="#shegeftangiz">
             <p className="text-lg">شگفت انگیز</p>
-          </Link>
+          </a>
 
-          <Link to="">
+          <a href="#porforosh">
             <p className="text-lg">پرفروش ترین ها</p>
-          </Link>
+          </a>
 
-          <Link to="">
+          <Link to="/balut">
             <p className="text-lg">در بلوط بفروشید</p>
           </Link>
         </div>

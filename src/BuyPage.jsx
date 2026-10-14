@@ -15,7 +15,7 @@ export default function BuyPage() {
   };
 
   return (
-    <div dir="rtl">
+    <div >
       <Header />
 
       <main className="p-6 text-right">
